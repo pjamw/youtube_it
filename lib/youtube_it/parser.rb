@@ -464,6 +464,8 @@ class YouTubeIt
 
         end
 
+        perm_private = media_group.elements["yt:private"] ? true : false
+
         YouTubeIt::Model::Video.new(
           :video_id       => video_id,
           :published_at   => published_at,
@@ -489,7 +491,9 @@ class YouTubeIt
           :latitude       => latitude,
           :longitude      => longitude,
           :state          => state,
-          :unique_id      => ytid)
+          :unique_id      => ytid,
+          :perm_private   => perm_private)
+
       end
 
       def parse_media_content (media_content_element)
@@ -538,3 +542,4 @@ class YouTubeIt
     end
   end
 end
+

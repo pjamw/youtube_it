@@ -114,9 +114,11 @@ class YouTubeIt
 
       # *Fixnum*:: Number of times that the video has been favorited
       attr_reader :favorite_count
-      
+
       # *String*:: State of the video (processing, restricted, deleted, rejected and failed)
       attr_reader :state
+
+      attr_reader :perm_private
 
 
       # Geodata
@@ -236,4 +238,5 @@ EDOC
     end
   end
 end
+
 
